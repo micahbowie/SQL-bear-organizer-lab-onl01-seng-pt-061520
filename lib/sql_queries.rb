@@ -27,5 +27,5 @@ def counts_number_of_bears_with_goofy_temperaments
 end
 
 def selects_bear_that_killed_Tim
-  "SELECT color FROM bears WHERE name = 'grey'"
+  "select color,count(color) from bears group by color order by count(color) desc limit 1;"
 end
